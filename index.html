@@ -1,116 +1,154 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sehaj ajimal - coming soon</title>
+    <title>Sehaj Ajimal</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
         :root {
             --background-dark: #121212;
             --text-dark: #f4f4f4;
+            --background-light: #ffffff;
+            --text-light: #121212;
             --accent-color: #4caf50;
+            --footer-dark: #f4f4f4; /* Light text for dark mode */
+            --footer-light: #121212; /* Dark text for light mode */
         }
 
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
             background-color: var(--background-dark);
             color: var(--text-dark);
             text-align: center;
-        }
-
-        .header {
-            position: absolute;
-            top: 100px;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .container {
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        h1 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin: 0;
-            text-transform: lowercase;
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-            text-transform: lowercase;
-            cursor: pointer;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .new-screen {
-            display: none;
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: var(--background-dark);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .theme-toggle-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .theme-toggle {
+            width: 50px;
+            height: 24px;
+            border-radius: 50px;
+            background-color: var(--accent-color);
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .theme-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-circle {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        .theme-toggle input:checked + .toggle-circle {
+            left: 26px;
+        }
+
+        .header {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0;
+            text-transform: capitalize;
+            margin-top: -20px; /* Move the header up */
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px; /* Move the icons up */
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            color: var(--background-dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+            background-color: var(--background-light);
             color: var(--text-dark);
         }
 
-        .new-screen.visible {
-            display: flex;
-        }
-
-        .back-link {
-            margin-top: 20px;
-            color: var(--accent-color);
+        a {
             text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: lowercase;
-            cursor: pointer;
+            color: inherit;
         }
 
-        .back-link:hover {
-            text-decoration: underline;
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.8rem;
+            color: var(--footer-dark);
+            transition: color 0.3s ease;
         }
     </style>
 </head>
 <body>
-    <h1 class="header">sehaj ajimal</h1>
-    <div class="container">
-        <a onclick="goToNewScreen()">building</a>
+    <div class="theme-toggle-container">
+        <label class="theme-toggle">
+            <input type="checkbox" onchange="toggleTheme()">
+            <span class="toggle-circle"></span>
+        </label>
     </div>
-    <div class="new-screen" id="newScreen">
-        <a onclick="goToHomeScreen()">under construction...</a>
+    <h1 class="header">Sehaj Ajimal</h1>
+    <div class="icons">
+        <a href="mailto:sehajimal@gmail.com" target="_blank">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+        </a>
+        <a href="https://www.linkedin.com/in/sehajajimal/" target="_blank">
+            <div class="icon"><i class="fab fa-linkedin-in"></i></div>
+        </a>
+        <a href="https://github.com/sehajimal" target="_blank">
+            <div class="icon"><i class="fab fa-github"></i></div>
+        </a>
     </div>
-    <script>
-        function goToNewScreen() {
-            document.querySelector('.container').style.display = 'none';
-            document.getElementById('newScreen').classList.add('visible');
-        }
+    <div class="footer">© Sehaj Ajimal</div>
 
-        function goToHomeScreen() {
-            document.querySelector('.container').style.display = 'flex';
-            document.getElementById('newScreen').classList.remove('visible');
+    <script>
+        let isDarkMode = true;
+
+        function toggleTheme() {
+            isDarkMode = !isDarkMode;
+            document.body.style.backgroundColor = isDarkMode ? 'var(--background-dark)' : 'var(--background-light)';
+            document.body.style.color = isDarkMode ? 'var(--text-dark)' : 'var(--text-light)';
+            document.querySelector('.footer').style.color = isDarkMode ? 'var(--footer-dark)' : 'var(--footer-light)';
         }
     </script>
 </body>
