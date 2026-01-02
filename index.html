@@ -1,13 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sehaj Ajimal | Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sehaj Ajimal - Software Engineering student at McMaster University, SWE at BMO">
+    <title>Sehaj Ajimal</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="cursor.js" defer></script>
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+    <div class="layout">
+        <nav class="sidebar">
+            <div class="nav-section">
+                <div class="nav-line"></div>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link active cursor-target" data-section="about">about</a>
+                    <a href="#experience" class="nav-link cursor-target" data-section="experience">experience</a>
+                </div>
+            </div>
+            
+            <div class="social-section">
+                <div class="social-icons">
+                    <a href="https://github.com/sehajimal" target="_blank" rel="noopener noreferrer" class="social-icon cursor-target" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sehajajimal/" target="_blank" rel="noopener noreferrer" class="social-icon cursor-target" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+                <div class="social-line"></div>
+            </div>
+        </nav>
+        
+        <main class="content">
+            <div class="content-wrapper">
+                <div class="text-column">
+                    <!-- About Section -->
+                    <div class="notes-container" id="about-section">
+                        <div class="note">
+                            <p class="note-text">Hey, I'm Sehaj, <span class="locked-on"><strong>20 years old</strong></span>, from <span class="locked-on"><strong>Toronto, Canada</strong></span>, and currently a <span class="locked-on"><strong>Software Engineering</strong></span> student @ <span class="locked-on"><strong>McMaster University</strong></span>. Before I dove into tech, I spent years playing <span class="locked-on"><strong>rep soccer</strong></span>, which taught me discipline, teamwork, and how to perform under pressure. That competitive mindset carried over perfectly when I discovered software engineering and realized I could build systems that solve real problems.</p>
+                        </div>
+                        
+                        <div class="note">
+                            <p class="note-text">I'm passionate about <span class="locked-on"><strong>Agentic AI systems</strong></span>, <span class="locked-on"><strong>machine learning</strong></span>, and building intelligent automation that actually makes a difference. I'll be joining <span class="locked-on"><strong>BMO</strong></span> as a Software Engineer in Winter 2026. Previously, I worked at <span class="locked-on"><strong>FriedmannAI</strong></span>, an IBM Partner Plus startup, where I built RAG pipelines and fine-tuned LLMs for financial applications. Whether it's working on autonomous robotics, deploying clinical AI systems, or tackling complex ML challenges, I'm always looking for the next problem to solve.</p>
+                        </div>
+                        
+                        <div class="note">
+                            <p class="note-text">If you're into building things that matter, pushing boundaries, and learning along the way, let's connect.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Section -->
+                    <div class="projects-wrapper" id="experience-section" style="display: none;">
+                        <div class="projects-container">
+                        <div class="project">
+                            <div class="project-header">
+                                <div class="project-title">
+                                    Software Engineer @ BMO
+                                </div>
+                            </div>
+                            <p class="project-tagline">Incoming Winter 2026 • Toronto, ON</p>
+                            <p class="project-description">Joining BMO to work on production banking systems and financial technology solutions. Will contribute to scalable architectures that serve millions of customers while maintaining security and reliability standards in enterprise-grade applications.</p>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-header">
+                                <div class="project-title">
+                                    AI Software Engineer @ FriedmannAI
+                                </div>
+                            </div>
+                            <p class="project-tagline">IBM Partner Plus • May 2025 – Aug 2025</p>
+                            <p class="project-description">Built <span class="locked-on"><strong>RAG pipeline</strong></span> with IBM engineers using vector search to scale personalized financial advice <span class="locked-on"><strong>10×</strong></span>. Fine-tuned LLMs on regulatory datasets to ensure <span class="locked-on"><strong>95% compliance</strong></span> in AI-generated financial guidance. Developed secure <span class="locked-on"><strong>IBM Cloud backend</strong></span> with REST APIs and encryption, maintaining <span class="locked-on"><strong>99% uptime</strong></span> on platforms.</p>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-header">
+                                <div class="project-title">
+                                    Machine Learning Engineer @ McMaster Aerial Robotics
+                                </div>
+                            </div>
+                            <p class="project-tagline">Drone Team • Oct 2025 – Present</p>
+                            <p class="project-description">Implemented a <span class="locked-on"><strong>real-time circle-detection vision system</strong></span> for autonomous landing using a hybrid approach of TensorFlow and classical CV techniques. Optimized ML inference on the <span class="locked-on"><strong>Jetson Nano (CUDA-accelerated)</strong></span> to achieve <span class="locked-on"><strong>sub-50 ms processing</strong></span>. Integrated detection outputs with the core flight stack, interfacing with precision-landing controllers and waypoint-navigation logic.</p>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-header">
+                                <div class="project-title">
+                                    Software Engineer @ McMaster Exoskeleton
+                                </div>
+                            </div>
+                            <p class="project-tagline">Humanoid Project • Oct 2025 – Present</p>
+                            <p class="project-description">Developed a <span class="locked-on"><strong>DRL policy (PPO/SAC)</strong></span> for an Axibo humanoid exoskeleton, improving system stability to increase average walk time by <span class="locked-on"><strong>20% in simulation</strong></span>. Engineered an efficient RL pipeline to integrate high-dimensional sensory data (IMU/Joints), enabling successful <span class="locked-on"><strong>simulation-to-real transfer</strong></span> of control policies with high fidelity.</p>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-header">
+                                <div class="project-title">
+                                    Machine Learning Engineer @ VALID
+                                </div>
+                            </div>
+                            <p class="project-tagline">MED-T, McMaster • Oct 2025 – Present</p>
+                            <p class="project-description">Developed a <span class="locked-on"><strong>ClinicalBERT-powered AI model</strong></span> that integrates MIMIC-IV data to provide real-time diagnostic recommendations, aiming to reduce <span class="locked-on"><strong>2-30% of unnecessary imaging</strong></span>. Engineered a full ML pipeline for reducing superfluous CT/MRI use, including data acquisition, NLP preprocessing, and deployment via a <span class="locked-on"><strong>RESTful API</strong></span> for clinicians.</p>
+                        </div>
+                        </div>
+                        <!-- Scroll Indicator -->
+                        <button id="scroll-indicator" class="scroll-indicator" aria-label="Scroll to next section" style="display: none;">
+                            <svg width="40" height="12" viewBox="0 0 40 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 2L20 10L38 2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
 </html>

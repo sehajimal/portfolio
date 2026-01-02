@@ -1,103 +1,29 @@
-# Sehaj Ajimal - Portfolio
+# Portfolio Website
 
-A modern, beautiful personal portfolio built with React, Vite, Tailwind CSS, and Framer Motion.
+A clean, minimal starting point for building a portfolio website.
 
-## 🚀 Features
+## Structure
 
-- **Modern Design**: Clean and professional design with smooth animations
-- **Fully Responsive**: Looks great on all devices from mobile to desktop
-- **Dark/Light Mode**: Toggle between dark and light themes
-- **Smooth Animations**: Beautiful animations powered by Framer Motion
-- **Interactive Sections**:
-  - Hero section with social links
-  - About section with stats
-  - Skills section with technology icons
-  - Projects showcase
-  - Contact section with multiple ways to connect
-  - Footer with quick links
+- `index.html` - Main HTML file
+- `styles.css` - Stylesheet
+- `script.js` - JavaScript file
 
-## 🛠️ Technologies Used
+## Getting Started
 
-- **React 18** - Modern React with hooks
-- **Vite** - Lightning fast build tool
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library for React
-- **React Icons** - Popular icon sets
-- **React Intersection Observer** - Trigger animations on scroll
+Simply open `index.html` in your browser to view the site.
 
-## 📦 Installation
+For development, you can use a local server:
 
 ```bash
-# Install dependencies
-npm install
+# Using Python 3
+python3 -m http.server 8000
 
-# Start development server
-npm run dev
+# Using Node.js (if you have http-server installed)
+npx http-server
 
-# Build for production
-npm run build
-
-# Preview production build
-npm preview
+# Using PHP
+php -S localhost:8000
 ```
 
-## 🎨 Customization
+Then visit `http://localhost:8000` in your browser.
 
-### Update Personal Information
-
-1. **Hero Section** (`src/components/Hero.jsx`):
-   - Update name, title, and description
-   - Update social links
-
-2. **About Section** (`src/components/About.jsx`):
-   - Customize your bio and stats
-
-3. **Skills Section** (`src/components/Skills.jsx`):
-   - Add or remove skills and technologies
-
-4. **Projects Section** (`src/components/Projects.jsx`):
-   - Add your actual projects with links
-   - Update project descriptions and technologies
-
-5. **Contact Section** (`src/components/Contact.jsx`):
-   - Update contact information
-
-### Styling
-
-- All colors can be customized in `tailwind.config.js`
-- Main theme colors are defined using Tailwind's color system
-- CSS variables can be adjusted in `src/index.css`
-
-## 📱 Development Server
-
-The development server runs on `http://localhost:3000/`
-
-Changes are hot-reloaded automatically during development.
-
-## 🚀 Deployment
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-The built files will be in the `dist/` directory, ready to be deployed to any static hosting service like:
-
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS S3
-- Cloudflare Pages
-
-## 📝 License
-
-This project is open source and available under the MIT License.
-
-## 🤝 Contributing
-
-Feel free to fork this project and customize it for your own portfolio!
-
----
-
-Made with ❤️ using React and Tailwind CSS
